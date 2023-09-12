@@ -1,6 +1,6 @@
 package com.hnust.usercentral;
 
-import com.hnust.usercentral.UserCentralApplication;
+import com.examplespringbootstarter.ServiceBean;
 import com.hnust.usercentral.service.UserService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -15,8 +15,12 @@ public class UserCentralApplicationTest {
     @Autowired
     private UserService userService;
 
+    @Autowired
+    private ServiceBean serviceBean;
+
     @Test
     public void test(){
-        System.out.println(userService);
+        System.out.println(serviceBean.sayHello("Editor"));
     }
+
 }
